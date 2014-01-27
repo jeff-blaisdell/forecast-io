@@ -37,5 +37,6 @@ app.get('/weather/:latitude/:longitude', function(req, res){
   }
 });
 
-app.listen(9010);
-console.log('Listening on port 9010');
+var port = Number(process.env.PORT || 9010);
+app.listen(port);
+console.log('Listening on port ' + port);
